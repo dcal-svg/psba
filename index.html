@@ -1,4 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!doctype html>
 <html lang="es-AR">
 <head>
@@ -60,6 +59,14 @@
     .skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 50; background: var(--text-main); color: var(--bg-surface); padding: 0.75rem 1rem; border-radius: 10px; font-weight: 600; text-decoration: none; }
     .skip-link:focus { top: 3.25rem; }
 
+    /* Banner de ejemplo */
+    .demo-banner {
+      position: relative; z-index: 20;
+      background: #35291a; color: #fbf6ea;
+      text-align: center; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em;
+      padding: 0.6rem 1rem;
+    }
+    .demo-banner span { color: #e6cf94; font-weight: 500; }
 
     .ambient-glow { position: fixed; top: -120px; left: 50%; transform: translateX(-50%); width: min(900px, 100vw); height: 480px; background: radial-gradient(ellipse at center, rgba(169, 121, 31, 0.14), rgba(242, 233, 216, 0) 70%); pointer-events: none; z-index: 0; }
     .app-container { position: relative; max-width: 1240px; margin: 0 auto; padding: 1.75rem 2rem 4rem; z-index: 1; }
@@ -285,6 +292,7 @@
 </head>
 <body>
 
+<!-- BANNER-EJEMPLO (para volver a mostrarlo, borrá estas marcas de comentario): <div class="demo-banner" role="note">Ejemplo de diseño — no es la versión publicada<span class="hide-sm"> · propuesta para revisar</span></div> -->
 <a class="skip-link" href="#clases">Ir directo a las clases</a>
 <div class="ambient-glow" aria-hidden="true"></div>
 
@@ -315,7 +323,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         <span>Ayuda<span class="hide-sm"> ya</span></span>
       </a>
-      <a class="pill-btn" href="https://padrematias.ar/dcal/login.html">
+      <a class="pill-btn" href="/salir" title="Salir (entraste como __EMAIL__)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
         Salir
       </a>
@@ -398,6 +406,7 @@
         <button type="button" class="btn btn-ghost toggle-all" id="toggle-all">Expandir todo</button>
       </div>
       <div id="modules"></div>
+      <p class="desc-note">Las descripciones de cada clase son orientativas: Vimeo no tiene resumen cargado para estos videos, así que se armaron solo a partir del título.</p>
     </section>
 
     <section class="section calm" id="ayuda" aria-labelledby="calma-titulo" tabindex="-1" style="margin-top:2rem">
@@ -410,12 +419,12 @@
         <p>No tenés que atravesarlo en soledad. La atención es confidencial; el 135 y el 0800 son gratuitos.</p>
         <div class="crisis-lines">
           <a class="tel-btn" href="tel:135"><b>135</b><span>Prevención del suicidio · gratis desde CABA y GBA</span></a>
+          <a class="tel-btn" href="tel:+541152751135"><b>(011) 5275-1135</b><span>Prevención del suicidio · todo el país</span></a>
           <a class="tel-btn" href="tel:08003451435"><b>0800 345 1435</b><span>Prevención del suicidio · todo el país</span></a>
-          <a class="tel-btn" href="tel:08003331665"><b>0800 333 1665</b><span>Salud Mental Responde · CABA · 24 h</span></a>
           <a class="tel-btn" href="tel:911"><b>911</b><span>Emergencias</span></a>
           <a class="tel-btn" href="tel:107"><b>107</b><span>Emergencias médicas</span></a>
         </div>
-        <p class="disclaimer">La línea de prevención del suicidio (Centro de Asistencia al Suicida) no atiende las 24 horas: si no responde o da ocupado, llamá al 911 o al 107. <strong>Este curso es un acompañamiento espiritual y formativo: no reemplaza la atención de un profesional de salud mental.</strong></p>
+        <p class="disclaimer">La línea de prevención del suicidio (Centro de Asistencia al Suicida) atiende de 8 a 0 h; si da ocupado, volvé a intentar. <strong>Este curso es un acompañamiento espiritual y formativo: no reemplaza la atención de un profesional de salud mental.</strong></p>
       </div>
 
       <h3 style="font-size:1.02rem">Kit SOS rápido</h3>
@@ -460,16 +469,16 @@
           <h3 id="audio-titulo">Ejercicio de relajación (audio)</h3>
           <p>Un audio guiado para frenar, respirar y volver al cuerpo. Buscá un lugar tranquilo y, si podés, usá auriculares.</p>
           <audio controls preload="none" aria-labelledby="audio-titulo">
-            <source src="https://padrematias.ar/dcal/audio/ejercicioderelajacion.mp3" type="audio/mpeg">
-            Tu navegador no puede reproducir el audio. <a href="https://padrematias.ar/dcal/audio/ejercicioderelajacion.mp3">Descargalo acá</a>.
+            <source src="/material/ejercicio-de-relajacion.mp3" type="audio/mpeg">
+            Tu navegador no puede reproducir el audio. <a href="/material/ejercicio-de-relajacion.mp3">Descargalo acá</a>.
           </audio>
         </article>
         <article class="tool">
           <h3>Kit SOS completo (PDF)</h3>
           <p>Las tres prácticas con sus oraciones. Guardalo en el celular para tenerlo siempre.</p>
           <div class="btn-row">
-            <a class="btn btn-green" href="https://padrematias.ar/dcal/pdf/kitsos.pdf" target="_blank" rel="noopener">Abrir <span class="visually-hidden">el Kit SOS (PDF, se abre en otra pestaña)</span></a>
-            <a class="btn btn-green-alt" href="https://padrematias.ar/dcal/pdf/kitsos.pdf" download>Descargar <span class="visually-hidden">el Kit SOS (PDF)</span></a>
+            <a class="btn btn-green" href="/material/kit-sos.pdf" target="_blank" rel="noopener">Abrir <span class="visually-hidden">el Kit SOS (PDF, se abre en otra pestaña)</span></a>
+            <a class="btn btn-green-alt" href="/material/kit-sos.pdf?dl=1" download>Descargar <span class="visually-hidden">el Kit SOS (PDF)</span></a>
           </div>
         </article>
       </div>
@@ -483,8 +492,8 @@
           <p class="section-lead">Una guía para acompañar tus reflexiones clase a clase. Elegí el formato que te quede más cómodo: completalo en el celular, imprimilo o escribí a mano en una libreta.</p>
         </div>
         <div class="btn-row">
-          <a class="btn btn-primary" href="https://drive.google.com/file/d/1Y6Vp6Difnvi3ZqtHI5LMbkAKywYLwZ8o/view?usp=sharing" target="_blank" rel="noopener">PDF para imprimir</a>
-          <a class="btn btn-blue-alt" href="https://docs.google.com/document/d/1x-M_Y6UFsu6M5poO1wulmfhrSwgMcIWFM9zI5Spi79k/edit?usp=sharing" target="_blank" rel="noopener">Copia en Google Docs</a>
+          <a class="btn btn-primary" href="https://drive.google.com/file/d/1Y6Vp6Difnvi3ZqtHI5LMbkAKywYLwZ8o/view?usp=sharing" target="_blank" rel="noopener">PDF para imprimir <span class="visually-hidden">(se abre en otra pestaña)</span></a>
+          <a class="btn btn-blue-alt" href="https://docs.google.com/document/d/1x-M_Y6UFsu6M5poO1wulmfhrSwgMcIWFM9zI5Spi79k/edit?usp=sharing" target="_blank" rel="noopener">Copia en Google Docs <span class="visually-hidden">(se abre en otra pestaña)</span></a>
           <a class="btn btn-blue-alt" href="https://padrematias.ar/dcal/diariov4.docx" download>Word (.docx)</a>
         </div>
       </div>
@@ -505,7 +514,7 @@
     <div>
       <strong>Padre Matías Jurado</strong> &mdash; <em>De la cruz a la Luz</em>
       <nav class="footer-links" aria-label="Legales y soporte">
-        <a href="https://curso.padrematias.ar/privacidad" target="_blank" rel="noopener">Política de privacidad</a>
+        <a href="/privacidad">Política de privacidad</a>
         <a href="mailto:dcal.soporte@gmail.com">Soporte</a>
       </nav>
     </div>
@@ -513,9 +522,9 @@
   </footer>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@vimeo/player@2.30.4/dist/player.min.js" async></script>
+<script src="https://player.vimeo.com/api/player.js" async></script>
 <script>
-  const clases = [{"n": "00", "phase": "intro", "title": "Clase de bienvenida", "desc": "Presentación del curso «De la cruz a la Luz».", "vimeoTitle": "00. Clase de bienvenida", "hasDesc": true, "dur": 1748, "vid": "1232175422", "h": "187202ef23", "thumb": "https://i.vimeocdn.com/video/2214038371-b3b1d694aeb5d503065f8380248eb0e77e2b8cf1ddaced508d321de589e8a628-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "1", "phase": "mod1", "title": "El primer paso es dejar de mentirse", "desc": "Sobre el primer paso del camino: dejar de mentirse.", "vimeoTitle": "Clase 1. El primer paso es dejar de mentirse", "hasDesc": false, "dur": 1779, "vid": "1231996658", "h": "a5b3d52bca", "thumb": "https://i.vimeocdn.com/video/2215203728-12db7df8c10d38ac0e50c086a9a0b093643129cec0cb41d29737747d9d88692b-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "2", "phase": "mod1", "title": "Tu historia sin el relato armado", "desc": "Para mirar tu historia sin el relato armado.", "vimeoTitle": "Clase 2. Tu historia sin el relato armado", "hasDesc": false, "dur": 1537, "vid": "1232067131", "h": "e9a7ba6c4d", "thumb": "https://i.vimeocdn.com/video/2215856764-9056ebae61c5e42a093b3e88ec87d6f12c4bfe1cdd6a90d63c327b37200526da-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "3", "phase": "mod1", "title": "Qué necesitabas y no recibiste", "desc": "Sobre lo que necesitabas y no recibiste.", "vimeoTitle": "Clase 3. Qué necesitabas y no recibiste", "hasDesc": false, "dur": 3300, "vid": "1232002378", "h": "6adbda24a7", "thumb": "https://i.vimeocdn.com/video/2207310866-fc19c97dabba80d71962bfc5276be6eb8ccf6b016c0168824a832d168bbc866e-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "4", "phase": "mod1", "title": "Tu patrón de repetición", "desc": "Para reconocer tu patrón de repetición.", "vimeoTitle": "Clase 4. Tu patrón de repetición", "hasDesc": false, "dur": 3399, "vid": "1232002379", "h": "68ca3ac9f8", "thumb": "https://i.vimeocdn.com/video/2207310693-bc1ddc733658dbabce912caf11fdd1f89c06d459049731aa77216d3ed5f91d8e-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "5", "phase": "mod2", "title": "Tus defensas", "desc": "Una mirada a tus defensas.", "vimeoTitle": "Clase 5. Tus defensas", "hasDesc": false, "dur": 2643, "vid": "1232002377", "h": "37520a781f", "thumb": "https://i.vimeocdn.com/video/2207308467-7127dd2cef9b9b5c199834edbc08730713525fe74377e1bc263ba1c60936f39f-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "6", "phase": "mod2", "title": "El mapa de tus emociones", "desc": "Para trazar el mapa de tus emociones.", "vimeoTitle": "Clase 6. El mapa de tus emociones", "hasDesc": false, "dur": 2610, "vid": "1232067134", "h": "d3e197071f", "thumb": "https://i.vimeocdn.com/video/2207393964-f3e9bf3b22ab70ab88c7911b7cc2ff4f1fd1d3f50ca639c00d0dbc7e55958222-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "7", "phase": "mod2", "title": "Qué seguís haciendo que te lastima", "desc": "Sobre lo que seguís haciendo que te lastima.", "vimeoTitle": "Clase 7. Qué seguís haciendo que te lastima", "hasDesc": false, "dur": 2627, "vid": "1232067133", "h": "31685a84c5", "thumb": "https://i.vimeocdn.com/video/2207394044-c88ac289d6bebece3f603d83072784a399737373d09a90ae767d824cd842e594-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "8", "phase": "mod2", "title": "Leer tu historia con Dios, sin distorsión", "desc": "Para leer tu historia con Dios, sin distorsión.", "vimeoTitle": "Clase 8. Leer tu historia con Dios, sin distorsión", "hasDesc": false, "dur": 3461, "vid": "1232067130", "h": "1b0854cb9e", "thumb": "https://i.vimeocdn.com/video/2207396776-66d2c8ce3e70056a19b4d25963cfabcbeaae50e6fc10a83188036c08c59273c6-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "9", "phase": "mod3", "title": "La Ventana de Tolerancia", "desc": "Sobre la Ventana de Tolerancia.", "vimeoTitle": "Clase 9 - La Ventana de Tolerancia - Padre Matias", "hasDesc": false, "dur": 3955, "vid": "1232074442", "h": "30722b0ce3", "thumb": "https://i.vimeocdn.com/video/2207395467-ed1369d4f0158efb6719fb466a1fbfc3f47954f7a6dd42b249395839c09e5362-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "10", "phase": "mod3", "title": "Entrar en la herida sin perderte", "desc": "Sobre cómo entrar en la herida sin perderte.", "vimeoTitle": "Clase 10. Entrar en la herida sin perderte", "hasDesc": false, "dur": 2761, "vid": "1232020418", "h": "8add2e92b3", "thumb": "https://i.vimeocdn.com/video/2207334469-a3c876d23917fa7fea6c218602436cbbacf0e0d3762670b55543243c07a6f8a1-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "11", "phase": "mod3", "title": "Expresar lo que nunca dijiste", "desc": "Para expresar lo que nunca dijiste.", "vimeoTitle": "Clase 11 - Expresar lo que nunca dijiste", "hasDesc": false, "dur": 2683, "vid": "1232020417", "h": "2d4b271ab9", "thumb": "https://i.vimeocdn.com/video/2207334422-35cc5f1f742204678620b258e031c22fad1b51a8d82c4e0c2313388ec215bef1-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "12", "phase": "mod3", "title": "Rezar desde lo que te pasa", "desc": "Sobre rezar desde lo que te pasa.", "vimeoTitle": "Clase 12. Rezar desde lo que te pasa", "hasDesc": false, "dur": 2926, "vid": "1232020416", "h": "8034d9cace", "thumb": "https://i.vimeocdn.com/video/2207335145-d6a41381583e012486bba01f2b221222a4862c6634c9881a89e00a324dc1d68c-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "13", "phase": "mod4", "title": "El perdón real", "desc": "Sobre el perdón real.", "vimeoTitle": "Clase 13. El perdón real", "hasDesc": false, "dur": 3982, "vid": "1232052518", "h": "383074b091", "thumb": "https://i.vimeocdn.com/video/2207376658-ce23d7610dee7bac87e26fb51ae90eac83d178687faa64459ca7ad4eff98a651-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "14", "phase": "mod4", "title": "El ritual del perdón", "desc": "Sobre el ritual del perdón.", "vimeoTitle": "Clase 14. El ritual del perdón", "hasDesc": false, "dur": 3625, "vid": "1232052513", "h": "021680719e", "thumb": "https://i.vimeocdn.com/video/2207376364-2ea188098ff845603c2673687be7887d452a1c4868081a588d7f3b56fabf08e0-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "15", "phase": "mod5", "title": "El límite sagrado", "desc": "Sobre el límite sagrado.", "vimeoTitle": "Clase 15. El limite sagrado", "hasDesc": false, "dur": 2681, "vid": "1232052512", "h": "3b0a6b1b15", "thumb": "https://i.vimeocdn.com/video/2207375231-94318e563127a992fb6a3216d138e68192ad71dbdd322d05203521841e9e18c5-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "16", "phase": "mod5", "title": "Plan mínimo diario", "desc": "Para armar tu plan mínimo diario.", "vimeoTitle": "Clase 16. Plan mínimo diario", "hasDesc": false, "dur": 2415, "vid": "1232052516", "h": "60d515e7d7", "thumb": "https://i.vimeocdn.com/video/2207374391-d497039c96608d9c296d612db2de1cb6643fc6d5af4b362998a057cb09597ddf-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "B1", "phase": "bonus", "title": "Confesión 360", "desc": "Sesión especial: Confesión 360.", "vimeoTitle": "DCAL - Confesion 360", "hasDesc": false, "dur": 5968, "vid": "1232059013", "h": "94094665f5", "thumb": "https://i.vimeocdn.com/video/2207383223-925144847a15928d961d05c8d6bdb49f55e878a77ecd7111b44e0f1fcaa89aec-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "B2", "phase": "bonus", "title": "Taller de Clara Cuevas", "desc": "Taller especial a cargo de Clara Cuevas.", "vimeoTitle": "DCAL - Taller Clara Cuevas", "hasDesc": false, "dur": 4918, "vid": "1232059659", "h": "7599b29b51", "thumb": "https://i.vimeocdn.com/video/2207376251-380317a9b1a59113ed6077ccb069271d3d7b5398feee66897f9e64d628a77029-d_640x360?region=us", "author": "Invitada especial"}];
+  const clases = [{"n": "00", "phase": "intro", "title": "Clase de bienvenida", "desc": "Presentación del curso «De la cruz a la Luz».", "vimeoTitle": "00. Clase de bienvenida", "hasDesc": true, "dur": 1938, "vid": "1232175422", "h": "187202ef23", "thumb": "https://i.vimeocdn.com/video/2218266872-c0ef696fa61842e2d6878c7ff835ef1d123c14525aaf7cce130ee5984cfac5d9-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "1", "phase": "mod1", "title": "El primer paso es dejar de mentirse", "desc": "Sobre el primer paso del camino: dejar de mentirse.", "vimeoTitle": "Clase 1. El primer paso es dejar de mentirse", "hasDesc": false, "dur": 1779, "vid": "1231996658", "h": "a5b3d52bca", "thumb": "https://i.vimeocdn.com/video/2217502737-9eea4427b5f7a8b6216ff78402b9c2cab944da7b64075a042c836b14f24cbe0e-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "2", "phase": "mod1", "title": "Tu historia sin el relato armado", "desc": "Para mirar tu historia sin el relato armado.", "vimeoTitle": "Clase 2. Tu historia sin el relato armado", "hasDesc": false, "dur": 1537, "vid": "1232067131", "h": "e9a7ba6c4d", "thumb": "https://i.vimeocdn.com/video/2217334036-067bc7eb66ea7fe862b4536ccc88b89176327eaf04237a4bb26dfbb4373de481-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "3", "phase": "mod1", "title": "Qué necesitabas y no recibiste", "desc": "Sobre lo que necesitabas y no recibiste.", "vimeoTitle": "Clase 3. Qué necesitabas y no recibiste", "hasDesc": false, "dur": 1639, "vid": "1232002378", "h": "6adbda24a7", "thumb": "https://i.vimeocdn.com/video/2217559366-64c224f306c2178e6beaeee477b29cd84eaa47b6f021fb7b3e29bc6fd2e82fe6-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "4", "phase": "mod1", "title": "Tu patrón de repetición", "desc": "Para reconocer tu patrón de repetición.", "vimeoTitle": "Clase 4. Tu patrón de repetición", "hasDesc": false, "dur": 1539, "vid": "1232002379", "h": "68ca3ac9f8", "thumb": "https://i.vimeocdn.com/video/2217558313-701a5ee9211ba251c305d718d6718b82471583d9a175652a79c2499bf5736ebf-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "5", "phase": "mod2", "title": "Tus defensas", "desc": "Una mirada a tus defensas.", "vimeoTitle": "Clase 5. Tus defensas", "hasDesc": false, "dur": 1254, "vid": "1232002377", "h": "37520a781f", "thumb": "https://i.vimeocdn.com/video/2217775361-22589b78359838dd57446edc366fc837e27459cceb86ccf5bf71fe6d3316d285-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "6", "phase": "mod2", "title": "El mapa de tus emociones", "desc": "Para trazar el mapa de tus emociones.", "vimeoTitle": "Clase 6. El mapa de tus emociones", "hasDesc": false, "dur": 1208, "vid": "1232067134", "h": "d3e197071f", "thumb": "https://i.vimeocdn.com/video/2217804337-a2e5edef7c795727e00631143922ce401fa26f3d4d0546fe37086d3e16db2bb0-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "7", "phase": "mod2", "title": "Qué seguís haciendo que te lastima", "desc": "Sobre lo que seguís haciendo que te lastima.", "vimeoTitle": "Clase 7. Qué seguís haciendo que te lastima", "hasDesc": false, "dur": 2627, "vid": "1232067133", "h": "31685a84c5", "thumb": "https://i.vimeocdn.com/video/2207394044-c88ac289d6bebece3f603d83072784a399737373d09a90ae767d824cd842e594-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "8", "phase": "mod2", "title": "Leer tu historia con Dios, sin distorsión", "desc": "Para leer tu historia con Dios, sin distorsión.", "vimeoTitle": "Clase 8. Leer tu historia con Dios, sin distorsión", "hasDesc": false, "dur": 3461, "vid": "1232067130", "h": "1b0854cb9e", "thumb": "https://i.vimeocdn.com/video/2207396776-66d2c8ce3e70056a19b4d25963cfabcbeaae50e6fc10a83188036c08c59273c6-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "9", "phase": "mod3", "title": "La Ventana de Tolerancia", "desc": "Sobre la Ventana de Tolerancia.", "vimeoTitle": "Clase 9 - La Ventana de Tolerancia - Padre Matias", "hasDesc": false, "dur": 3955, "vid": "1232074442", "h": "30722b0ce3", "thumb": "https://i.vimeocdn.com/video/2207395467-ed1369d4f0158efb6719fb466a1fbfc3f47954f7a6dd42b249395839c09e5362-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "10", "phase": "mod3", "title": "Entrar en la herida sin perderte", "desc": "Sobre cómo entrar en la herida sin perderte.", "vimeoTitle": "Clase 10. Entrar en la herida sin perderte", "hasDesc": false, "dur": 2761, "vid": "1232020418", "h": "8add2e92b3", "thumb": "https://i.vimeocdn.com/video/2207334469-a3c876d23917fa7fea6c218602436cbbacf0e0d3762670b55543243c07a6f8a1-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "11", "phase": "mod3", "title": "Expresar lo que nunca dijiste", "desc": "Para expresar lo que nunca dijiste.", "vimeoTitle": "Clase 11 - Expresar lo que nunca dijiste", "hasDesc": false, "dur": 2683, "vid": "1232020417", "h": "2d4b271ab9", "thumb": "https://i.vimeocdn.com/video/2207334422-35cc5f1f742204678620b258e031c22fad1b51a8d82c4e0c2313388ec215bef1-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "12", "phase": "mod3", "title": "Rezar desde lo que te pasa", "desc": "Sobre rezar desde lo que te pasa.", "vimeoTitle": "Clase 12. Rezar desde lo que te pasa", "hasDesc": false, "dur": 2926, "vid": "1232020416", "h": "8034d9cace", "thumb": "https://i.vimeocdn.com/video/2207335145-d6a41381583e012486bba01f2b221222a4862c6634c9881a89e00a324dc1d68c-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "13", "phase": "mod4", "title": "El perdón real", "desc": "Sobre el perdón real.", "vimeoTitle": "Clase 13. El perdón real", "hasDesc": false, "dur": 3982, "vid": "1232052518", "h": "383074b091", "thumb": "https://i.vimeocdn.com/video/2207376658-ce23d7610dee7bac87e26fb51ae90eac83d178687faa64459ca7ad4eff98a651-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "14", "phase": "mod4", "title": "El ritual del perdón", "desc": "Sobre el ritual del perdón.", "vimeoTitle": "Clase 14. El ritual del perdón", "hasDesc": false, "dur": 3625, "vid": "1232052513", "h": "021680719e", "thumb": "https://i.vimeocdn.com/video/2207376364-2ea188098ff845603c2673687be7887d452a1c4868081a588d7f3b56fabf08e0-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "15", "phase": "mod5", "title": "El límite sagrado", "desc": "Sobre el límite sagrado.", "vimeoTitle": "Clase 15. El limite sagrado", "hasDesc": false, "dur": 2681, "vid": "1232052512", "h": "3b0a6b1b15", "thumb": "https://i.vimeocdn.com/video/2207375231-94318e563127a992fb6a3216d138e68192ad71dbdd322d05203521841e9e18c5-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "16", "phase": "mod5", "title": "Plan mínimo diario", "desc": "Para armar tu plan mínimo diario.", "vimeoTitle": "Clase 16. Plan mínimo diario", "hasDesc": false, "dur": 2415, "vid": "1232052516", "h": "60d515e7d7", "thumb": "https://i.vimeocdn.com/video/2207374391-d497039c96608d9c296d612db2de1cb6643fc6d5af4b362998a057cb09597ddf-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "B1", "phase": "bonus", "title": "Confesión 360", "desc": "Sesión especial: Confesión 360.", "vimeoTitle": "DCAL - Confesion 360", "hasDesc": false, "dur": 5968, "vid": "1232059013", "h": "94094665f5", "thumb": "https://i.vimeocdn.com/video/2207383223-925144847a15928d961d05c8d6bdb49f55e878a77ecd7111b44e0f1fcaa89aec-d_640x360?region=us", "author": "Padre Matías Jurado"}, {"n": "B2", "phase": "bonus", "title": "Taller de Clara Cuevas", "desc": "Taller especial a cargo de Clara Cuevas.", "vimeoTitle": "DCAL - Taller Clara Cuevas", "hasDesc": false, "dur": 4918, "vid": "1232059659", "h": "7599b29b51", "thumb": "https://i.vimeocdn.com/video/2207376251-380317a9b1a59113ed6077ccb069271d3d7b5398feee66897f9e64d628a77029-d_640x360?region=us", "author": "Invitada especial"}];
 
   const MODULES = [
     { key: 'intro', num: '✦', kicker: 'Introducción', title: 'Bienvenida' },
@@ -546,12 +555,26 @@
   function moduleOf(c) { return MODULES.find(m => m.key === c.phase); }
   function embedUrl(c) { return `https://player.vimeo.com/video/${c.vid}?h=${c.h}&title=0&byline=0&portrait=0&badge=0&autoplay=1&playsinline=1&dnt=1`; }
 
-  /* ---------- Progreso (local, solo para la demo) ---------- */
-  const KEY_DONE = 'dcal_demo_vistas';
-  const KEY_LAST = 'dcal_demo_ultima';
+  /* ---------- Progreso (guardado en el servidor, por alumno) ---------- */
+  const KEY_DONE = 'vistas';
+  const KEY_LAST = 'ultima';
+  const SERVER_PROGRESS = __PROGRESS__;
+  const mem = { vistas: JSON.stringify(SERVER_PROGRESS.vistas || []), ultima: SERVER_PROGRESS.ultima || null };
+  let syncTimer = null, dirty = false;
+  function flushProgress() {
+    if (!dirty) return;
+    dirty = false;
+    fetch('/api/progress', { method: 'PUT', credentials: 'same-origin', keepalive: true,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ vistas: JSON.parse(mem.vistas || '[]'), ultima: mem.ultima }) })
+      .then(r => { if (r.status === 401) location.href = '/login'; })
+      .catch(() => { dirty = true; });
+  }
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushProgress(); });
+  window.addEventListener('pagehide', flushProgress);
   const store = {
-    get(k) { try { return localStorage.getItem(k); } catch { return null; } },
-    set(k, v) { try { localStorage.setItem(k, v); } catch {} }
+    get(k) { return mem[k] ?? null; },
+    set(k, v) { if (mem[k] === v) return; mem[k] = v; dirty = true; clearTimeout(syncTimer); syncTimer = setTimeout(flushProgress, 800); }
   };
   const completedSet = (() => {
     try { const a = JSON.parse(store.get(KEY_DONE) || '[]'); return new Set(a.filter(id => clases.some(c => c.n === id))); }
@@ -583,7 +606,7 @@
         <div class="card-content">
           <span class="card-kicker">${labelFor(c)}</span>
           <h3 class="card-title">${esc(c.title)}</h3>
-          ${c.hasDesc ? `<p class="card-desc">${esc(c.desc)}</p>` : ''}
+          <p class="card-desc">${esc(c.desc)}</p>
         </div>
         <div class="card-meta-bar">
           <button type="button" class="status-toggle" data-action="toggle" aria-pressed="${done}" aria-label="Marcar como vista: ${esc(c.title)}">
@@ -599,7 +622,7 @@
     modulesEl.innerHTML = MODULES.map(m => {
       const items = clases.filter(c => c.phase === m.key);
       const total = items.reduce((s, c) => s + c.dur, 0);
-      const open = false;
+      const open = false; // todos los módulos empiezan contraídos
       return `
         <details class="module ${m.key === 'bonus' ? 'is-bonus' : ''}" data-module="${m.key}" ${open ? 'open' : ''}>
           <summary>
@@ -778,7 +801,12 @@
   modulesEl.addEventListener('toggle', updateToggleAllLabel, true);
 
   document.getElementById('hero-poster').addEventListener('click', () => embedInHero(getItem(currentId)));
-  document.getElementById('continue-btn').addEventListener('click', e => selectClass(e.currentTarget.dataset.id));
+  document.getElementById('continue-btn').addEventListener('click', e => {
+    const item = getItem(e.currentTarget.dataset.id);
+    const mod = item && modulesEl.querySelector(`.module[data-module="${item.phase}"]`);
+    if (mod) mod.open = true;
+    selectClass(e.currentTarget.dataset.id);
+  });
   document.getElementById('player-done').addEventListener('click', () => toggleComplete(currentId));
   document.getElementById('next-btn').addEventListener('click', () => {
     const next = clases[indexOf(currentId) + 1];
@@ -812,5 +840,3 @@
 </script>
 </body>
 </html>
-
-</body></html>
